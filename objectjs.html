@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object ?collection/pair of keys/properties and its value 
+        //create an object 1. using literal way 2.new keyword
+        
+        let student={name : "ranjana" ,
+         age:23,
+         ismarried:false, 
+         address:{
+            streetNo:23,
+            area:"indrapuram",
+            pincode:201008,
+            city:"GZB"
+         },
+         education:["10th","12th","B.Tech"],
+         degree:"B.Tech",
+         branch:"CSE",
+         year:2025,
+
+         getinfo:function(){
+            return "my current education is " +student.degree;
+         }
+        };
+        //access objects key using dot notation
+
+        // console.log(student.address.streetNo);
+        // console.log(student.address.pincode); //object
+        // console.log(student.getinfo()); //fxn
+        // console.log(student.eduaction[2]);//array
+        console.log(typeof(student));
+
+        //find keys in object 
+        console.log('name' in student);
+        //delete kets from object 
+        console.log(delete student.name);
+        console.log(student);
+
+        //find lengths of objects -
+        let keyslength=Object.keys(student);
+
+
+        //iterate keys of object using for loop
+
+        // for(let i=0;i<keys.kength.length;i++){
+        //     //console.log(student[keysLength[i]])
+        // }
+
+        // //iterate the keys usinf of object usi g in loop
+        // for(let x in student ){
+        //     console.log(student[x]);
+        // }
+
+
+
+        //create object using new keyboard
+
+        // let myinfo=new Object();
+        // myinfo.name="ranjna";
+        // myinfo.age=18;
+        // myinfo.address="mars";
+        // myinfo.number=9999999;
+        // myinfo.ismarried=false;
+
+        // console.log(myinfo.name);  //using dost notattion
+        // console.log(myinfo['address']); //using [] notation
+
+
+        
+
+    </script>
+</body>
+</html>
