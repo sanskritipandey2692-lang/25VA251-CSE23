@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in JS</title>
+</head>
+<body>
+    <script>
+        //Function: block of code, used or defined to perform specific
+        //Types of function
+        //normal function:- with para, without para and with default
+
+        //normal function without parameters..
+
+        function demo(){
+            console.log("Hello JS");
+        }
+        demo(); //function calling
+
+        //with parameters
+
+        function demo1(text){
+            console.log("Hello" + text);
+        }
+        demo1("React");
+        //default parameters
+
+        function add(a,b=10){
+            console.log("Addition is " + (a+b));
+        }
+        add(123);
+
+        //A synchronous function executes code in a strict, sequential order, where each operation must finish before the next one starts. It is a blocking operation, meaning the program halts and waits for the function to return a result, offering predictable flow but potential performance bottlenecks. 
+     //synchronous function
+     function cal(){
+     function add(a,b){
+        console.log(a+b);
+     }
+     function mul(x,y){
+        console.log(x*y);
+     }
+     function sub(p,r){
+        console.log(p-r);
+     }
+     mul(3,6);
+     sub(9,6);
+     add(3,6);
+     }
+     cal();
+
+     //An anonymous function is a function definition without a specific name, created on-the-fly for short-term tasks, callbacks, or one-time use. They are commonly assigned to variables or passed directly to higher-order functions. Common in languages like Python (lambda), JavaScript (arrow functions), and Java, they improve code conciseness.
+
+     let msg=function(){
+        console.log("Hello ABES");
+        //console.log(typeof(msg));
+     }
+     msg();
+     // short code for above function i.e. arrow function
+     let msg1=()=>console.log("Hello ABESSSSS EC");
+     msg1();
+     //arrow function using multiple lines
+
+     let msg2=(a,b)=>{
+        var num1=a;
+        var num2=b;
+        var res=num1/num2;
+        console.log("Result is " + res);
+     }
+     msg2(10,20);
+
+     //An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. It is a self-executing, often anonymous function wrapped in parentheses to create a private, local scope, which prevents variable pollution in the global scope and handles encapsulation. 
+     (function(){
+        console.log("Hello World!");
+     })();
+
+     //short code for above function
+     
+
+     //promises in js: A JavaScript Promise is an object representing the eventual completion or failure of an asynchronous operation and its resulting value. Promises provide a cleaner, more manageable way to handle asynchronous code compared to traditional callbacks, helping to avoid "callback hell". 
+     // Promise States
+// A promise can be in one of three mutually exclusive states: 
+// MDN Web Docs
+// MDN Web Docs
+//  +1
+// Pending: The initial state; the asynchronous operation is still in progress.
+// Fulfilled: The operation completed successfully, and a value is available.
+// Rejected: The operation failed, and an error (or reason) is available.
+
+let myPromoise=new Promise(function(resolve, reject){
+   let age=25;
+   if(age>=18){
+      resolve("valid age");
+   }
+   else{
+      reject("wait for next year");
+   }
+});
+myPromoise.then(msg=>console.log(msg)).catch(error=>console.log(error));
+console.log(myPromoise);
+
+//In JavaScript, async and await are special keywords that allow developers to write asynchronous code in a clean, sequential, synchronous-like style, building on top of Promises to improve readability and error handling
+//API ---aplliaction programming interface 
+        //json in javascript ----//storing and transporting or sending data 
+        //jsong string form ? //JSON.parse() and JSON.stringify()
+
+
+        // let userData=fetch('https://dummyjson.com/products');
+        // console.log(userData) pending me aayega 
+
+
+        async function userInfo(){
+            try{
+          let userData= await fetch('https://dummyjson.com/products');
+          let response=await userData.json();
+        console.log(response);
+        }//try end 
+        catch(error){
+            console.log(error);
+        }//catch end 
+    } //fxn end 
+        userInfo(); //fxn calling
+
+
+
+        //High order function:-
+        //higher order fxn ----//mao filter readuce forEach 
+
+        let num=[4,6,7,8,9,3,2,1];
+        //map
+        let square=num.map(n=>n*n)
+        console.log(square);
+
+        //reduce 
+        let sum=num.reduce((total,n)=>total+n);
+        console.log(sum);
+
+
+        //filter
+        let sorting=num.filter(n=>n>2);
+        console.log(sorting);
+
+        //forEach 
+        num.forEach(n=>console.log(n*2));
+
+        //local storage  is a web browser feature allowing JavaScript to store key-value pairs persistently, even after closing the tab or browser. It provides around 5MB of storage, specifically for client-side data like user preferences, themes, or application state, without server interaction. Data is stored as strings and requires JSON serialization for objects. 
+        let myInfo={
+         name:"john",
+         email:"john@gmail.com",
+         mobileno:356867698,
+         age:19,
+
+        };
+        //store the object but converting
+        localStorage.setItem('myInfo' , JSON.stringify(myInfo));
+        //retrived and parse the JSON string back into an object
+        let storeData=JSON.parse(localStorage.getItem('myInfo'));
+        console.log(storeData.name);
+
+    </script>
+    
+</body>
+</html>
