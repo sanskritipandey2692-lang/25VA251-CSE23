@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechStore</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">TechStore</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Latest Products</h1>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100 shadow">
+          <img src="images/laptop.jpg" class="card-img-top" alt="Laptop">
+          <div class="card-body">
+            <h5 class="card-title">
+              Gaming Laptop
+              <span class="badge bg-danger">New</span>
+            </h5>
+            <p class="card-text">
+              High performance gaming laptop with RTX graphics.
+            </p>
+            <h4 class="text-primary">₹85,000</h4>
+            <button
+              class="btn btn-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#modal1"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100 shadow">
+          <img src="images/headphones.jpg" class="card-img-top" alt="Headphones">
+          <div class="card-body">
+            <h5 class="card-title">
+              Wireless Headphones
+              <span class="badge bg-success">Sale</span>
+            </h5>
+            <p class="card-text">
+              Noise cancelling wireless headphones with deep bass.
+            </p>
+            <h4 class="text-primary">₹4,999</h4>
+            <button
+              class="btn btn-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#modal2"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100 shadow">
+          <img src="images/smartwatch.jpg" class="card-img-top" alt="Watch">
+          <div class="card-body">
+            <h5 class="card-title">
+              Smart Watch
+              <span class="badge bg-warning text-dark">New</span>
+            </h5>
+            <p class="card-text">
+              Stylish smartwatch with fitness tracking features.
+            </p>
+            <h4 class="text-primary">₹7,500</h4>
+            <button
+              class="btn btn-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#modal3"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 1 -->
+  <div class="modal fade" id="modal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Gaming Laptop</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal">
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Intel i7 Processor, 16GB RAM, 1TB SSD,
+            RTX Graphics and RGB Keyboard.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 2 -->
+  <div class="modal fade" id="modal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Wireless Headphones</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal">
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Premium quality wireless headphones with
+            active noise cancellation and long battery life.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 3 -->
+  <div class="modal fade" id="modal3">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Smart Watch</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal">
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Smartwatch with heart rate monitoring,
+            fitness tracking, Bluetooth calling and GPS.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-4 mt-5">
+    <p class="mb-2">
+      © 2026 TechStore. All Rights Reserved.
+    </p>
+    <div>
+      <i class="bi bi-facebook mx-2"></i>
+      <i class="bi bi-instagram mx-2"></i>
+      <i class="bi bi-twitter mx-2"></i>
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
