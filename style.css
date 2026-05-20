@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Content Box Styling */
+.content-box {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
